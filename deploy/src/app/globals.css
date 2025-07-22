@@ -1,0 +1,98 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-red: #b30d02
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@layer components {
+  .container-lg {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  /* .typography {
+    p {
+      font-size: var(--text-base);
+      color: var(--color-gray-700);
+    }
+    h1 {
+      font-size: var(--text-2xl--line-height);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+  } */
+}
+
+/* navbar */
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-red);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+/* styles/globals.css or styles/swiper-custom.css */
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff; /* or any color */
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 9999px;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+  width: 13px;
+  height: 13px;
+  margin-inline: 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000;
+}
+.product-section {
+    .swiper-button-prev, .swiper-button-next {
+      color: #fff;
+      background: #101828;
+      border-radius: 9999px;
+      padding: 10px;
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+  }
+  .swiper-button-prev:after, .swiper-button-next:after {
+      font-size: 1.5rem;
+  }
+}
