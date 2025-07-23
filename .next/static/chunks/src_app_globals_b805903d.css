@@ -2189,11 +2189,11 @@ button.swiper-pagination-bullet {
 }
 
 .product-section .swiper-button-prev:after {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .product-section .swiper-button-next:after {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 @property --tw-translate-x {
